@@ -1,0 +1,23 @@
+--cpu Cortex-M3
+"stepmotor\main.o"
+"stepmotor\stm32f1xx_it.o"
+"stepmotor\stm32f1xx_hal_msp.o"
+"stepmotor\stm32f1xx_hal_rcc_ex.o"
+"stepmotor\stm32f1xx_hal_gpio.o"
+"stepmotor\stm32f1xx_hal_tim.o"
+"stepmotor\stm32f1xx_hal_gpio_ex.o"
+"stepmotor\stm32f1xx_hal_cortex.o"
+"stepmotor\stm32f1xx_hal_dma.o"
+"stepmotor\stm32f1xx_hal_tim_ex.o"
+"stepmotor\stm32f1xx_hal_pwr.o"
+"stepmotor\stm32f1xx_hal_flash.o"
+"stepmotor\stm32f1xx_hal_flash_ex.o"
+"stepmotor\stm32f1xx_hal_rcc.o"
+"stepmotor\stm32f1xx_hal.o"
+"stepmotor\drv8825.o"
+"stepmotor\system_stm32f1xx.o"
+"stepmotor\startup_stm32f103xb.o"
+--library_type=microlib --strict --scatter "stepmotor\stepmotor.sct"
+--diag_suppress=L6329 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "stepmotor.map" -o stepmotor\stepmotor.axf
